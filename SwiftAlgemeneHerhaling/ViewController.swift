@@ -20,19 +20,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func berekenBtn() {
-        // vind de waarde in het invulveld
-        let inputValue = bedragTF!.text!
-        
         // is er niks ingevuld, geef dan een alert weer om de gebruiker te verwittigen
-        if inputValue.count > 0 {
-            let bedrag = Float.init(inputValue)
+        if let inputValue = Float.init(bedragTF!.text!) {
             var tarief:Float?
             switch(tariefSC.selectedSegmentIndex){
             case 0:  tarief = 1.06
             case 1:  tarief = 1.12
             default: tarief = 1.21
             }
-            resultaatTF.text = String(format: "€%.2f", bedrag! * tarief!)
+            resultaatTF.text = String(format: "€%.2f", inputValue * tarief!)
             bedragTF.resignFirstResponder()
         } else {
             let alert = UIAlertController.init(
