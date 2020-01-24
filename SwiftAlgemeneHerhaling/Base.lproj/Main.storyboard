@@ -49,11 +49,14 @@
                                                 <integer key="value" value="6"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="berekenBtn" destination="BYZ-38-t0r" eventType="touchUpInside" id="Juz-aR-Xbb"/>
+                                        </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6IN-2J-8JI">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="6IN-2J-8JI">
                                         <rect key="frame" x="20" y="48" width="295" height="36"/>
                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="28"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bedrag inclusief BTW:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cA0-bP-RYD">
                                         <rect key="frame" x="54" y="250" width="227" height="18"/>
@@ -104,15 +107,29 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.170108493" green="0.6908775063" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="DOR-S4-8cW" secondAttribute="trailing" constant="20" symbolic="YES" id="X5c-2q-Cm2"/>
                             <constraint firstItem="DOR-S4-8cW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="bMd-Hk-Boh"/>
                             <constraint firstItem="DOR-S4-8cW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jxv-l0-MhZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="AoL-kO-sPu" appends="YES" id="mXy-E9-Xx0"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="bedragTF" destination="6IN-2J-8JI" id="7iO-bu-Ylp"/>
+                        <outlet property="resultaatTF" destination="WcK-Rs-O43" id="LeA-NH-GoQ"/>
+                        <outlet property="tariefSC" destination="gC5-Ko-mEJ" id="laW-M9-uCH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="AoL-kO-sPu">
+                    <connections>
+                        <action selector="tappedOustideTextField" destination="BYZ-38-t0r" id="iAR-3X-bpu"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="132" y="138.98050974512745"/>
         </scene>
