@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,111 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftAlgemeneHerhaling" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DOR-S4-8cW">
+                                <rect key="frame" x="20" y="153.5" width="335" height="360"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bedrag zonder BTW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACm-dj-ABh">
+                                        <rect key="frame" x="20" y="20" width="295" height="18"/>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gC5-Ko-mEJ">
+                                        <rect key="frame" x="169" y="102" width="146" height="32"/>
+                                        <segments>
+                                            <segment title="6%"/>
+                                            <segment title="12%"/>
+                                            <segment title="21%"/>
+                                        </segments>
+                                        <color key="selectedSegmentTintColor" red="0.61446260649999995" green="0.89069793610000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </segmentedControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ym6-oC-51R">
+                                        <rect key="frame" x="20" y="158" width="295" height="44"/>
+                                        <color key="backgroundColor" red="0.17010849298622366" green="0.69087750625097022" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="nEg-xr-ih6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="19"/>
+                                        <state key="normal" title="Bereken BTW">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6IN-2J-8JI">
+                                        <rect key="frame" x="20" y="48" width="295" height="36"/>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="28"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bedrag inclusief BTW:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cA0-bP-RYD">
+                                        <rect key="frame" x="54" y="250" width="227" height="18"/>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="€0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcK-Rs-O43">
+                                        <rect key="frame" x="119" y="278" width="97" height="32"/>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTW tarief" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taj-94-EhO">
+                                        <rect key="frame" x="20" y="110" width="96.5" height="16"/>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="Ym6-oC-51R" firstAttribute="leading" secondItem="DOR-S4-8cW" secondAttribute="leading" constant="20" id="31Q-IL-wZT"/>
+                                    <constraint firstItem="gC5-Ko-mEJ" firstAttribute="top" secondItem="6IN-2J-8JI" secondAttribute="bottom" constant="18" id="3GF-hx-Gwl"/>
+                                    <constraint firstAttribute="trailing" secondItem="6IN-2J-8JI" secondAttribute="trailing" constant="20" id="7Sj-wz-HIv"/>
+                                    <constraint firstItem="6IN-2J-8JI" firstAttribute="top" secondItem="ACm-dj-ABh" secondAttribute="bottom" constant="10" id="FD0-4f-JOQ"/>
+                                    <constraint firstItem="ACm-dj-ABh" firstAttribute="leading" secondItem="DOR-S4-8cW" secondAttribute="leading" constant="20" id="Hvm-bd-dSg"/>
+                                    <constraint firstItem="ACm-dj-ABh" firstAttribute="top" secondItem="DOR-S4-8cW" secondAttribute="top" constant="20" id="HyJ-3G-B9Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ym6-oC-51R" secondAttribute="trailing" constant="20" id="IMe-Ka-6sM"/>
+                                    <constraint firstItem="gC5-Ko-mEJ" firstAttribute="leading" relation="lessThanOrEqual" secondItem="taj-94-EhO" secondAttribute="trailing" constant="52.5" id="QBn-xM-87J"/>
+                                    <constraint firstItem="cA0-bP-RYD" firstAttribute="centerX" secondItem="DOR-S4-8cW" secondAttribute="centerX" id="RPC-b9-b6r"/>
+                                    <constraint firstItem="taj-94-EhO" firstAttribute="leading" secondItem="DOR-S4-8cW" secondAttribute="leading" constant="20" id="ajp-ZE-WTA"/>
+                                    <constraint firstItem="WcK-Rs-O43" firstAttribute="top" secondItem="cA0-bP-RYD" secondAttribute="bottom" constant="10" id="d9H-HA-g09"/>
+                                    <constraint firstAttribute="trailing" secondItem="ACm-dj-ABh" secondAttribute="trailing" constant="20" id="dff-R3-KlV"/>
+                                    <constraint firstItem="6IN-2J-8JI" firstAttribute="leading" secondItem="DOR-S4-8cW" secondAttribute="leading" constant="20" id="faa-Xf-A1z"/>
+                                    <constraint firstAttribute="height" constant="360" id="go6-fU-DZq"/>
+                                    <constraint firstItem="Ym6-oC-51R" firstAttribute="top" secondItem="gC5-Ko-mEJ" secondAttribute="bottom" constant="25" id="hAU-f4-6eg"/>
+                                    <constraint firstItem="WcK-Rs-O43" firstAttribute="centerX" secondItem="DOR-S4-8cW" secondAttribute="centerX" id="pph-bm-Hrb"/>
+                                    <constraint firstItem="taj-94-EhO" firstAttribute="top" secondItem="6IN-2J-8JI" secondAttribute="bottom" constant="26" id="pph-sR-ig3"/>
+                                    <constraint firstAttribute="bottom" secondItem="WcK-Rs-O43" secondAttribute="bottom" constant="50" id="vlM-7c-IJt"/>
+                                    <constraint firstAttribute="trailing" secondItem="gC5-Ko-mEJ" secondAttribute="trailing" constant="20" id="zzl-wX-l7O"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.170108493" green="0.6908775063" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="DOR-S4-8cW" secondAttribute="trailing" constant="20" symbolic="YES" id="X5c-2q-Cm2"/>
+                            <constraint firstItem="DOR-S4-8cW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="bMd-Hk-Boh"/>
+                            <constraint firstItem="DOR-S4-8cW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jxv-l0-MhZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="132" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
