@@ -11,12 +11,17 @@ import UIKit
 class ExpenseListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    var data = DAO.init()
+    var data = DAO.sharedExpenses
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    // Render de table opnieuw met de geupdatete gegevens
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

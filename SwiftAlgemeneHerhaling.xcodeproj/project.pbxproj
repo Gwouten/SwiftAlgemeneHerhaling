@@ -18,6 +18,7 @@
 		31F7B6C423DB07980009E744 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F7B6C323DB07980009E744 /* Expense.swift */; };
 		31F7B6C623DB083F0009E744 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F7B6C523DB083F0009E744 /* DAO.swift */; };
 		31F7B6C823DB1FF60009E744 /* ExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F7B6C723DB1FF60009E744 /* ExpenseTableViewCell.swift */; };
+		31F7B6CA23DB29500009E744 /* newExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F7B6C923DB29500009E744 /* newExpenseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		31F7B6C323DB07980009E744 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		31F7B6C523DB083F0009E744 /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		31F7B6C723DB1FF60009E744 /* ExpenseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTableViewCell.swift; sourceTree = "<group>"; };
+		31F7B6C923DB29500009E744 /* newExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newExpenseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				31F7B6C323DB07980009E744 /* Expense.swift */,
 				31F7B6C523DB083F0009E744 /* DAO.swift */,
 				31F7B6C723DB1FF60009E744 /* ExpenseTableViewCell.swift */,
+				31F7B6C923DB29500009E744 /* newExpenseViewController.swift */,
 			);
 			path = SwiftAlgemeneHerhaling;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			files = (
 				31F7B6C623DB083F0009E744 /* DAO.swift in Sources */,
 				31F7B6AF23DAE5FF0009E744 /* ViewController.swift in Sources */,
+				31F7B6CA23DB29500009E744 /* newExpenseViewController.swift in Sources */,
 				31F7B6C823DB1FF60009E744 /* ExpenseTableViewCell.swift in Sources */,
 				31F7B6C223DB07600009E744 /* ExpenseListViewController.swift in Sources */,
 				31F7B6AB23DAE5FF0009E744 /* AppDelegate.swift in Sources */,

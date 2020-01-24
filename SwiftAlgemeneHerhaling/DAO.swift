@@ -10,18 +10,19 @@ import Foundation
 
 class DAO {
     
+    static var sharedExpenses = DAO.init()
+    
     var expenses:[Expense]
     
-    init() {
+    private init() {
         
         expenses = [Expense]()
-        expenses.append(Expense.init(title: "Theros Boosters", amount: 35))
-        expenses.append(Expense.init(title: "Eldraine Boosters", amount: 3.5))
-        expenses.append(Expense.init(title: "M20 Boosters", amount: 7))
-        expenses.append(Expense.init(title: "War of the Spark Boosters", amount: 10.5))
-        expenses.append(Expense.init(title: "Ravnica Allegiance Boosters", amount: 350))
-        expenses.append(Expense.init(title: "Guilds of Ravnica Boosters", amount: 17.5))
+        expenses.append(Expense.init(title: "Theros boosters", amount: 152))
         
+    }
+    
+    func addExpense(newExpense:Expense){
+        expenses.append(newExpense)
     }
     
 }
